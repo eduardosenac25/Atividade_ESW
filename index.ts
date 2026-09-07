@@ -24,9 +24,23 @@ while(true){
             acelerar(carro);
             break;
 
+        case 2:
+            carro.frear();
+            console.log(`Velocidade atual: ${carro.velocidade}`);
+            break;
+
         case 3:
             subirMarcha(carro);
             console.log(`Marcha atual: ${carro.marchaAtual}`);
+            break;
+
+        case 4:
+            descerMarcha(carro);
+            console.log(`Marcha atual: ${carro.marchaAtual}`);
+            break;
+
+        case 5:
+            console.table(carro);
             break;
     
         default:
@@ -54,4 +68,10 @@ function subirMarcha(veiculo: Veiculo): void{
     if(veiculo.marchaAtual < veiculo.numeroMarchas){
         veiculo.marchaAtual++;
     }       
+}
+
+function descerMarcha(veiculo: Veiculo): void{
+    if(veiculo.marchaAtual > 0){
+        veiculo.marchaAtual--;
+    }
 }
